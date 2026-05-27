@@ -38,4 +38,14 @@ class CarDashboard:
         tk.Button(self.btn_frame, text="Accelerate (+5)", bg="#2c3e50", fg="white", width=12, command=self.press_accelerate).grid(row=0, column=0, padx=10)
         tk.Button(self.btn_frame, text="Brake (-5)", bg="#c0392b", fg="white", width=12, command=self.press_brake).grid(row=0, column=1, padx=10)
 
-        
+    def press_accelerate(self):
+        self.my_car.accelerate()
+        self.speed_label.config(text=str(self.my_car.get_speed()))
+
+    def press_brake(self):
+        self.my_car.brake()
+        self.speed_label.config(text=str(self.my_car.get_speed()))
+
+    def run_application(self):
+        self.build_user_interface()
+        self.main_window.mainloop() 
