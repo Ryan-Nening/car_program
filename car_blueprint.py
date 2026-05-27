@@ -12,4 +12,9 @@ class Car:
     def brake(self):
         self.__speed -= 5
 
+    def get_speed(self):
+        return self.__speed
+    
+    def get_details(self):
+        return f"{self.__year_model} {self.__make}"
     
