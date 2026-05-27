@@ -18,3 +18,12 @@ class Car:
     def get_details(self):
         return f"{self.__year_model} {self.__make}"
     
+
+class CarDashboard:
+    def __init__(self):
+        self.main_window = tk.Tk()
+        self.main_window.title("Speedometer")
+        self.main_window.geometry("350x300")
+        self.main.window.configure(bg="lightble")
+        self.my_car = Car("2026", "CyberTruck")
+        
