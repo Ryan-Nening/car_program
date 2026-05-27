@@ -24,6 +24,11 @@ class CarDashboard:
         self.main_window = tk.Tk()
         self.main_window.title("Speedometer")
         self.main_window.geometry("350x300")
-        self.main.window.configure(bg="lightble")
+        self.main_window.configure(bg="lightblue")
         self.my_car = Car("2026", "CyberTruck")
+
+    def build_user_interface(self):
+        tk.Label(self.main_window, text = f"Vehicle: {self.my_car.get_details()}", background = "#0b0c10", foreground = "#66fcf1", font = ("Helvetica", 14, "bold")).pack(pady = (20, 10))
+        self.speed_label = tk.Label(self.main_window, text = str(self.my_car.get_speed()), font = ("Courier", 50, "bold"), background = "#0b0c10", foreground = "#45a29e")
+        self.speed_label.pack(pady = 10)
         
